@@ -1,0 +1,32 @@
+{
+	"name": "useful-unknown-website",
+	"scripts": {
+		"postinstall": "prettier-config-generate",
+		"lint": "eslint . --ignore-path .gitignore --ext .ts --color",
+		"format": "prettier .",
+		"format-write": "pnpm format --write",
+		"format-check": "pnpm format --check",
+		"typecheck": "tsc --noEmit",
+		"generate-data": "pnpm vite-node script/generate-data.ts",
+		"develop": "vite",
+		"build": "pnpm typecheck && vite build",
+		"preview": "vite preview"
+	},
+	"devDependencies": {
+		"@poolofdeath20/eslint-config": "^0.3.2",
+		"@poolofdeath20/prettier-config-generator": "^0.0.1",
+		"@poolofdeath20/tsconfig": "^0.0.0",
+		"@poolofdeath20/util": "^0.6.12",
+		"@types/fs-extra": "^11.0.4",
+		"@types/node": "^20.11.7",
+		"@typescript-eslint/eslint-plugin": "^6.19.1",
+		"@typescript-eslint/parser": "^6.19.1",
+		"eslint": "^8.56.0",
+		"fs-extra": "^11.2.0",
+		"prettier": "^3.2.4",
+		"puppeteer": "^22.0.0",
+		"typescript": "^5.3.3",
+		"vite": "^5.1.0",
+		"vite-node": "^1.2.2"
+	}
+}

@@ -1,0 +1,5 @@
+node_modules
+build
+.prettierrc
+src/data.js
+pnpm-lock.yaml

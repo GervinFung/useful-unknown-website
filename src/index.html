@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="description"
+			content="website to store useful unknown websites"
+		/>
+		<meta name="viewport" content="width=device-width" />
+		<style>
+			table {
+				border-collapse: collapse;
+				width: 100%;
+				table-layout: fixed;
+			}
+
+			td,
+			th {
+				padding: 8px;
+			}
+
+			table,
+			th,
+			td {
+				border: 1px solid black;
+				border-collapse: collapse;
+			}
+		</style>
+		<title>Useful Unknown Website</title>
+	</head>
+	<body>
+		<div id="root"></div>
+	</body>
+</html>
+<script type="module">
+	import data from './data.js';
+
+	const root = document.getElementById('root');
+
+	root.innerHTML = `
+        <h1>Useful Unknown Websites</h1>
+        <table>
+            <tr>
+                <th>Comments</th>
+                <th>References</th>
+            </tr>
+            ${data
+				.map((data) => {
+					return `
+                        <tr>
+                            <td>${data.commentContent}</td>
+                            <td>
+                                <a href=${data.permalink}>${data.permalink}</a>
+                            </td>
+                        </tr>
+                    `;
+				})
+				.join('')}
+        </table>
+    `;
+</script>
