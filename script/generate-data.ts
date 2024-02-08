@@ -120,7 +120,7 @@ const main = async () => {
 		`const data = ${JSON.stringify(data, null, 4)}; export default data;`
 	);
 
-	// await browser.close();
+	await browser.close();
 };
 
 main();
