@@ -1,5 +1,5 @@
 {
-	"name": "useful-unknown-website",
+	"name": "useful-unknown-website-comments",
 	"scripts": {
 		"postinstall": "prettier-config-generate",
 		"lint": "eslint . --ignore-path .gitignore --ext .ts --color",
