@@ -9,7 +9,7 @@
 		"typecheck": "tsc --noEmit",
 		"generate-data": "pnpm vite-node script/generate-data.ts",
 		"develop": "vite",
-		"build": "pnpm typecheck && vite build",
+		"build": "pnpm typecheck && vite build && cp build/index.html build/200.html",
 		"preview": "vite preview"
 	},
 	"devDependencies": {
